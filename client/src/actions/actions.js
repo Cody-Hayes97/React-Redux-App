@@ -4,7 +4,7 @@ export const DATA_LOAD_START = "DATA_LOAD_START";
 export const DATA_LOAD_SUCCESS = "DATA_LOAD_SUCCESS";
 export const DATA_LOAD_FAILURE = "DATA_LOAD_FAILURE";
 
-export const getData = () => dispatch => {
+export const getData = (artist, title) => dispatch => {
   dispatch({ type: DATA_LOAD_START });
   axios
     .get(`https://api.lyrics.ovh/v1/${artist}/${title}`)
@@ -16,6 +16,9 @@ export const getData = () => dispatch => {
       console.log(res);
     })
     .catch(err => {
-      console.log(err);
+      dispatch({
+        type: DATA_LOAD_FAILURE,
+        payload: err
+      });
     });
 };

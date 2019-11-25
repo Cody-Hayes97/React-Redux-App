@@ -1,20 +1,31 @@
-import React, { useState } from "react";
+import React from "react";
+import { Input } from "reactstrap";
 
 export const SearchBar = props => {
-  const [search, setSearch] = useState();
-
-  const handleChange = e => {
-    setSearch(e.target.value);
-  };
-
   return (
-    <div onSubmit={props.handleSubmit}>
-      <input
+    <div>
+      <Input
+        style={{
+          width: "50%",
+          marginLeft: "25%",
+          marginBottom: "2%"
+        }}
         type="text"
-        value={search}
-        onChange={handleChange}
-        placeholder="search lyrics here"
-      ></input>
+        value={props.search}
+        onChange={props.handleChange}
+        placeholder="Enter Artist Name"
+      ></Input>
+      <Input
+        style={{
+          width: "50%",
+          marginLeft: "25%",
+          marginBottom: "2%"
+        }}
+        type="text"
+        value={props.title}
+        onChange={props.handleTitleChange}
+        placeholder="Enter Song Name"
+      ></Input>
     </div>
   );
 };
