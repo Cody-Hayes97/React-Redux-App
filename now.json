@@ -5,7 +5,7 @@
     {
       "src": "project-name/package.json",
       "use": "@now/static-build",
-      "config": { "distDir": "client" }
+      "config": { "distDir": "build" }
     }
   ],
   "routes": [{ "src": "/(.*)", "dest": "project-name/$1" }]
