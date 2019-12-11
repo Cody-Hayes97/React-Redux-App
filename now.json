@@ -1,12 +1,10 @@
 {
   "version": 2,
   "name": "project-name",
-  "build": [
-    {
-      "src": "React-Redux-App/package.json",
-      "use": "@now/static-build",
-      "config": { "distDir": "build" }
-    }
-  ],
+  "build": {
+    "src": "React-Redux-App/package.json",
+    "use": "@now/static-build",
+    "config": { "distDir": "build" }
+  },
   "routes": [{ "src": "/(.*)", "dest": "project-name/$1" }]
 }
