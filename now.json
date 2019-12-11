@@ -1,9 +1,9 @@
 {
   "version": 2,
   "name": "project-name",
-  "builds": [
+  "build": [
     {
-      "src": "project-name/package.json",
+      "src": "React-Redux-App/package.json",
       "use": "@now/static-build",
       "config": { "distDir": "build" }
     }
