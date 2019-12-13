@@ -1,5 +1,6 @@
 {
   "name": "client",
+  "homepage": "https://react-redux-app-git-cody-hayes.codyhayes97.now.sh/client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
